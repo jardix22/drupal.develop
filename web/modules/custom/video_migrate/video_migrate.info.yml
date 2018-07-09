@@ -1,0 +1,5 @@
+name: 'Video Migrate'
+type: module
+description: 'This module allows you import playlist and their videos from an external API.'
+core: 8.x
+package: 'Custom'
