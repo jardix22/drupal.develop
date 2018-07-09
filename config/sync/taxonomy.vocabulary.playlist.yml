@@ -1,0 +1,9 @@
+uuid: 1baacbe4-1892-44c9-be51-fe74dd6b6a8d
+langcode: en
+status: true
+dependencies: {  }
+name: Playlist
+vid: playlist
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 1eac71f7-6b86-4eb7-926c-20a7d676a7f5
+langcode: en
+status: true
+dependencies: {  }
+name: Provider
+vid: provider
+description: ''
+hierarchy: 0
+weight: 0
