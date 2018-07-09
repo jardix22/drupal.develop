@@ -1,0 +1,29 @@
+uuid: d2de256a-ef48-49af-b1cb-8a3717cd8137
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provider
+    - node.type.video
+    - taxonomy.vocabulary.provider
+id: node.video.field_provider
+field_name: field_provider
+entity_type: node
+bundle: video
+label: Provider
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provider: provider
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
