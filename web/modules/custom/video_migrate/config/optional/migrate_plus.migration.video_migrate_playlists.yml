@@ -1,0 +1,39 @@
+# Migration configuration for imported playlists.
+id: video_migrate_playlists
+label: Import Providers taxonomy terms.
+migration_group: videos
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - video_migrate
+destination:
+  plugin: entity:taxonomy_term
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+
+  urls: http://api:3000/playlists
+
+  ids:
+    id:
+      type: integer
+
+  fields:
+    -
+      name: id
+      label: 'Id'
+      selector: id
+    -
+      name: name
+      label: Name
+      selector: name
+
+process:
+  vid:
+    plugin: default_value
+    default_value: playlist
+
+  name: name

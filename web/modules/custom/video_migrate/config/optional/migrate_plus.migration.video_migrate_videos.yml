@@ -1,0 +1,127 @@
+# Migration configuration for imported videos.
+id: video_migrate_videos
+label: Import videos nodes.
+migration_group: videos
+destination:
+  plugin: entity:node
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: http://api:3000/videos
+
+  ids:
+    video_id:
+      type: string
+
+  fields:
+    -
+      name: title
+      label: Title
+      selector: title
+    -
+      name: description
+      label: Description
+      selector: description
+    -
+      name: video
+      label: 'Video'
+      selector: video
+    -
+      name: video_id
+      label: 'Video Id'
+      selector: video_id
+    -
+      name: tags
+      label: Tags
+      selector: tags
+    -
+      name: provider
+      label: Provider
+      selector: provider
+    -
+      name: playlist
+      label: Playlist
+      selector: playlist
+
+process:
+  type:
+    plugin: default_value
+    default_value: video
+  title: title
+  body/value: description
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+  field_video: video
+  field_video_id: video_id
+
+  field_provider:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: provider
+    -
+      plugin: entity_lookup
+      source: provider
+      value_key: name
+      bundle_key: vid
+      bundle: provider
+      entity_type: taxonomy_term
+      ignore_case: true
+
+  field_playlist:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: playlist
+    -
+      plugin: entity_lookup
+      source: playlist
+      value_key: name
+      bundle_key: vid
+      bundle: playlist
+      entity_type: taxonomy_term
+      ignore_case: true
+
+  aux_tags:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: tags
+    -
+      plugin: explode
+      source: tags
+      delimiter: ', '
+
+  field_tags:
+    -
+      plugin: default_value
+      default_value: []
+    -
+      plugin: entity_lookup
+      source: '@aux_tags'
+      value_key: name
+      bundle_key: vid
+      bundle: tags
+      entity_type: taxonomy_term
+      ignore_case: true
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  status:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required:
+    - video_migrate_providers
+    - video_migrate_playlists
+
+dependencies:
+  enforced:
+    module:
+      - video_migrate
