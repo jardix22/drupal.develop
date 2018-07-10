@@ -23,6 +23,7 @@
         "drupal/core": "~8.5.3",
         "drupal/migrate_plus": "^2.0",
         "drupal/migrate_tools": "^2.0",
+        "drupal/pathauto": "^1.2",
         "drupal/video_embed_field": "^2.0",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
