@@ -34,6 +34,6 @@ source:
 process:
   vid:
     plugin: default_value
-    default_value: provider
+    default_value: providers
 
   name: name

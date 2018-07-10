@@ -67,7 +67,7 @@ process:
       source: provider
       value_key: name
       bundle_key: vid
-      bundle: provider
+      bundle: providers
       entity_type: taxonomy_term
       ignore_case: true
 
@@ -81,7 +81,7 @@ process:
       source: playlist
       value_key: name
       bundle_key: vid
-      bundle: playlist
+      bundle: playlists
       entity_type: taxonomy_term
       ignore_case: true
 
@@ -120,6 +120,7 @@ migration_dependencies:
   required:
     - video_migrate_providers
     - video_migrate_playlists
+    - video_migrate_tags
 
 dependencies:
   enforced:

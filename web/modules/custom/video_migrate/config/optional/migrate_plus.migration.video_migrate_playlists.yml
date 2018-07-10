@@ -34,6 +34,6 @@ source:
 process:
   vid:
     plugin: default_value
-    default_value: playlist
+    default_value: playlists
 
   name: name
