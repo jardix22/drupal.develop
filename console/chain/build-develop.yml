@@ -12,7 +12,7 @@ commands:
     arguments:
       profile: standard
   # Import configuration
-#  - command: config:import
+  - command: config:import
   # Rebuild caches.
   - command: cache:rebuild
     arguments:
