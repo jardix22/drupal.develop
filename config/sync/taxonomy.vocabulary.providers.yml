@@ -1,9 +1,9 @@
-uuid: 1baacbe4-1892-44c9-be51-fe74dd6b6a8d
+uuid: e7ee8897-ef72-4dcb-9877-969bce1d5d26
 langcode: en
 status: true
 dependencies: {  }
-name: Playlist
-vid: playlist
+name: Providers
+vid: providers
 description: ''
 hierarchy: 0
 weight: 0
