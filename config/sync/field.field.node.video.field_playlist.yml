@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_playlist
     - node.type.video
-    - taxonomy.vocabulary.playlist
+    - taxonomy.vocabulary.playlists
 id: node.video.field_playlist
 field_name: field_playlist
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      playlist: playlist
+      playlists: playlists
     sort:
       field: name
       direction: asc

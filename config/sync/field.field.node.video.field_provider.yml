@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_provider
     - node.type.video
-    - taxonomy.vocabulary.provider
+    - taxonomy.vocabulary.providers
 id: node.video.field_provider
 field_name: field_provider
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      provider: provider
+      providers: providers
     sort:
       field: name
       direction: asc

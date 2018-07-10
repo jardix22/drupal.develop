@@ -25,4 +25,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_playlist: true
+  field_provider: true
+  field_tags: true
+  field_video_id: true

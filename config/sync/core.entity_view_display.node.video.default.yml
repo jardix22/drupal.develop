@@ -22,37 +22,37 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_playlist:
-    weight: 103
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_provider:
-    weight: 102
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_tags:
-    weight: 104
-    label: above
+    weight: 5
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_video:
-    weight: 106
-    label: above
+    weight: 1
+    label: hidden
     settings:
       responsive: true
       width: 854
@@ -62,14 +62,16 @@ content:
     type: video_embed_field_video
     region: content
   field_video_id:
-    weight: 105
-    label: above
+    weight: 6
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
