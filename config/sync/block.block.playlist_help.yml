@@ -1,0 +1,22 @@
+uuid: bfa25b7c-1cbc-431b-ab0a-56d33190eb53
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - playlist
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: playlist_help
+theme: playlist
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
