@@ -1,0 +1,30 @@
+global-styling:
+  css:
+    theme:
+      css/main.css: {}
+
+  dependencies:
+    - playlist/playlist-carousel
+
+playlist-carousel:
+  js:
+    js/playlist-carousel.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - playlist/slick-carousel
+
+slick-carousel:
+  css:
+    theme:
+      //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css:
+        type: external
+
+      //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css:
+        type: external
+
+  js:
+    //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js:
+      type: external
+      attributes:
+        defer: true

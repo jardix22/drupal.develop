@@ -1,0 +1,38 @@
+/***  Playlists Views styles. ***/
+
+.playlist {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.playlist .playlist__title {
+  margin-bottom: .5rem;
+}
+
+.playlist .playlist__videos {
+  background: rgba(239, 239, 239, 0.5);
+  padding: 3rem 3rem 2rem 3rem;
+}
+
+.playlist .playlist__videos .slick-arrow {
+  width: 60px;
+  height: 60px;
+}
+
+.playlist .playlist__videos .slick-arrow::before {
+  color: #2196F3;
+  font-size: 60px;
+}
+
+.playlist .playlist__videos__content {
+  margin: 0 2rem;
+}
+
+.playlist .playlist__videos__content .views-field-field-video {
+  max-width: 324px;
+}
+
+.playlist .playlist__videos__content .views-field-title {
+  margin-top: 1.5rem;
+  text-align: center;
+}
