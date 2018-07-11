@@ -1,0 +1,26 @@
+/***  Video content full page styles. ***/
+.field--name-field-video,
+.field--name-field-tags,
+.field--name-body {
+  margin-top: 2rem;
+}
+
+.field--name-field-tags .links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.field--name-field-tags .links li {
+  margin-top: 0;
+  padding: 0;
+}
+
+.field--name-field-tags .links a {
+  color: black;
+  border-bottom: 0;
+  background: #c6c6c6;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .5rem 2rem;
+  text-decoration: none;
+}
