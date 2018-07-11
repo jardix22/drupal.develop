@@ -20,30 +20,14 @@ bundle: video
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    weight: 3
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_playlist:
-    weight: 4
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_provider:
-    weight: 3
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_tags:
-    weight: 5
+    weight: 2
     label: hidden
     settings:
       link: true
@@ -61,17 +45,12 @@ content:
     third_party_settings: {  }
     type: video_embed_field_video
     region: content
-  field_video_id:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_playlist: true
+  field_provider: true
+  field_video_id: true
