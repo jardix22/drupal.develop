@@ -10,9 +10,9 @@ playlist-carousel:
   js:
     js/playlist-carousel.js: {}
   dependencies:
-    - core/drupal
-    - core/jquery
     - playlist/slick-carousel
+    - core/jquery
+    - core/drupal
 
 slick-carousel:
   css:
