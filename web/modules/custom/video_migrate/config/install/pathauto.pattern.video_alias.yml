@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: video_alias
+label: 'Video alias'
+type: 'canonical_entities:node'
+pattern: '/video/[node:field_video_id]'
+selection_criteria:
+  78cf1a4e-1596-4675-9641-451139ce67b8:
+    id: node_type
+    bundles:
+      video: video
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 78cf1a4e-1596-4675-9641-451139ce67b8
+selection_logic: and
+weight: -5
+relationships: {  }
