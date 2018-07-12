@@ -1,9 +1,0 @@
-uuid: c2c64663-6ee3-40b1-a213-f7639ae2c581
-langcode: en
-status: true
-dependencies: {  }
-name: Playlists
-vid: playlists
-description: ''
-hierarchy: 0
-weight: 0
